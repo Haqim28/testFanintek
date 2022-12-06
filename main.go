@@ -6,8 +6,16 @@ import (
 )
 
 func main() {
-	angka := []int{1, 1, 1, 2, 3, 2, 4, 2}
+	// angka := []int{1, 1, 3, 1, 2, 1, 3, 3, 3, 3}
+	angka := []int{}
+	var nilai int
+
+	for i := 0; i < 6; i++ {
+		fmt.Scanln(&nilai)
+		angka = append(angka, nilai)
+	}
 	sort.Ints(angka)
+	// // [1,1,1,2,2,2,3,4]
 	var jumlah = 0
 	y := 1
 	for i := 0; i < len(angka); i++ {
@@ -21,5 +29,5 @@ func main() {
 			}
 		}
 	}
-	fmt.Println(jumlah)
+	fmt.Println("Terdapat", jumlah, "Pasangan ")
 }
